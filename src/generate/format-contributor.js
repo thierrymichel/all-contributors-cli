@@ -5,10 +5,10 @@ const avatarTemplate = _.template(
   '<img src="<%= contributor.avatar_url %>" width="<%= options.imageSize %>px;" alt="<%= name %>"/>',
 )
 const avatarBlockTemplate = _.template(
-  '<a href="<%= contributor.profile %>"><%= avatar %><br /><sub><b><%= name %></b></sub></a>',
+  '<a href="<%= contributor.profile %>"><%= avatar %><br /><sup><b><%= name %></b></sup></a>',
 )
 const avatarBlockTemplateNoProfile = _.template(
-  '<%= avatar %><br /><sub><b><%= name %></b></sub>',
+  '<%= avatar %><br /><sup><b><%= name %></b></sup>',
 )
 const contributorTemplate = _.template(
   '<%= avatarBlock %><br /><%= contributions %>',

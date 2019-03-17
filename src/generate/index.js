@@ -37,8 +37,8 @@ function injectListBetweenTags(newContent) {
 
 function formatLine(contributors) {
   // return `<td align="center">${contributors.join('</td><td align="center">')}</td>`
-  return `<li style="margin: 0; padding: 10px; text-align: center;">${contributors.join(
-    '</li><li style="margin: 0; padding: 10px; text-align: center;">'
+  return `<li style="flex-basis: 120px; margin: 0; padding: 10px; text-align: center;">${contributors.join(
+    '</li><li style="flex-basis: 120px; margin: 0; padding: 10px; text-align: center;">'
   )}</li>`
 }
 
