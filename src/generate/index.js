@@ -36,7 +36,10 @@ function injectListBetweenTags(newContent) {
 }
 
 function formatLine(contributors) {
-  return `<td align="center">${contributors.join('</td><td align="center">')}</td>`
+  // return `<td align="center">${contributors.join('</td><td align="center">')}</td>`
+  return `<li style="margin: 0; padding: 10px; text-align: center;">${contributors.join(
+    '</li><li style="margin: 0; padding: 10px; text-align: center;">'
+  )}</li>`
 }
 
 function generateContributorsList(options, contributors) {
@@ -46,9 +49,11 @@ function generateContributorsList(options, contributors) {
     }),
     _.chunk(options.contributorsPerLine),
     _.map(formatLine),
-    _.join('</tr><tr>'),
+    // _.join('</tr><tr>'),
+    _.join(''),
     newContent => {
-      return `\n<table><tr>${newContent}</tr></table>\n\n`
+      // return `\n<table><tr>${newContent}</tr></table>\n\n`
+      return `\n<ul style="display: flex; flex-wrap: wrap; margin: 0; padding: 0; list-style: none;">${newContent}</ul>\n\n`
     },
   )(contributors)
 }

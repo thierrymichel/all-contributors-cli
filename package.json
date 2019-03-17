@@ -3,7 +3,7 @@
   "version": "0.0.0-semantically-released",
   "description": "Tool to easily add recognition for new contributors",
   "bin": {
-    "all-contributors": "dist/cli.js"
+    "all-contributors": "src/cli.js"
   },
   "main": "dist/api.js",
   "files": [
