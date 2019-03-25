@@ -5,9 +5,9 @@
   "bin": {
     "all-contributors": "src/cli.js"
   },
-  "main": "dist/api.js",
+  "main": "src/api.js",
   "files": [
-    "dist"
+    "src"
   ],
   "engines": {
     "node": ">=4"
